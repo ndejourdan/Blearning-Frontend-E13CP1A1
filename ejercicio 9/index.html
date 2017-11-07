@@ -12,12 +12,18 @@ como elementos de una lista ordenada  -->
     <ol id="dias">
     </ol>
     <script type="text/javascript">
-      var dias = ["lunes", "martes", "miércoles"]
+      var dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+      //var parent tag es OL id=dias
       var parent_tag = document.getElementById('dias');
+      //empieza función
       dias.map(function(x){
-        var doc_element = document.createElement("p");
-        node = document.createTextNode("hola");
+        //elementos de una ol (li). var doc_element asigna al elemento creado
+        var doc_element = document.createElement("li");
+        // var node se asigna a cada elemento del array
+        var node = document.createTextNode(x);
+        //agregar cada día como li
         doc_element.appendChild(node);
+        //a OL como parent tag le asigno como child los LI de doc_element
         parent_tag.appendChild(doc_element);
       });
     </script>
